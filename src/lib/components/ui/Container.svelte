@@ -1,21 +1,18 @@
 <script lang="ts">
-	interface Props {
-		children: import("svelte").Snippet;
-	}
+  interface Props {
+    children: import("svelte").Snippet;
+  }
 
-	let { children }: Props = $props();
+  let { children }: Props = $props();
 </script>
 
 <div class="container">
-	{@render children()}
+  {@render children()}
 </div>
 
 <style>
-    .container {
-		width: min(
-			var(--max-width),
-			calc(100% - 3rem)
-			);
-		margin-inline: auto;
-	}
+  .container {
+    width: min(var(--max-width), calc(100% - 3rem));
+    margin-inline: auto;
+  }
 </style>
