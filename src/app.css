@@ -1,30 +1,29 @@
-
 /* ============================================================
    Design System
 ============================================================ */
 
 :root {
-    /* Colors */
-    --bg: #09090b;
-    --bg-secondary: #111113;
-    --surface: #18181b;
-    --surface-hover: #232326;
-    --border: #27272a;
+  /* Colors */
+  --bg: #09090b;
+  --bg-secondary: #111113;
+  --surface: #18181b;
+  --surface-hover: #232326;
+  --border: #27272a;
 
-    --text: #fafafa;
-    --text-muted: #a1a1aa;
+  --text: #fafafa;
+  --text-muted: #a1a1aa;
 
-    --accent: #4f8cff;
-    --accent-hover: #78a8ff;
+  --accent: #4f8cff;
+  --accent-hover: #78a8ff;
 
-    /* Layout */
-    --radius: 14px;
-    --max-width: 1200px;
+  /* Layout */
+  --radius: 14px;
+  --max-width: 1200px;
 
-    /* Shadows */
-    --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.25);
+  /* Shadows */
+  --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.25);
 
-    color-scheme: dark;
+  color-scheme: dark;
 }
 
 /* ============================================================
@@ -32,50 +31,50 @@
 ============================================================ */
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    min-height: 100vh;
+  margin: 0;
+  min-height: 100vh;
 
-    background:
-        radial-gradient(circle at top, rgba(79, 140, 255, 0.08), transparent 45%),
-        var(--bg);
+  background:
+    radial-gradient(circle at top, rgba(79, 140, 255, 0.08), transparent 45%),
+    var(--bg);
 
-    color: var(--text);
+  color: var(--text);
 
-    font-family:
-        Inter,
-        ui-sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 button {
-    font: inherit;
+  font: inherit;
 }
 
 /* ============================================================
@@ -86,15 +85,15 @@ h1,
 h2,
 h3,
 h4 {
-    margin: 0;
-    font-weight: 700;
-    letter-spacing: -0.03em;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.03em;
 }
 
 p {
-    margin: 0;
-    line-height: 1.7;
-    color: var(--text-muted);
+  margin: 0;
+  line-height: 1.7;
+  color: var(--text-muted);
 }
 
 /* ============================================================
@@ -102,20 +101,20 @@ p {
 ============================================================ */
 
 .section {
-    padding: 8rem 0;
+  padding: 8rem 0;
 }
 
 .glass {
-    background: rgba(255,255,255,.03);
-    backdrop-filter: blur(18px);
-    border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-soft);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
 }
 
 /* ============================================================
@@ -123,7 +122,7 @@ p {
 ============================================================ */
 
 ::selection {
-    background: rgba(79, 140, 255, .35);
+  background: rgba(79, 140, 255, 0.35);
 }
 
 /* ============================================================
@@ -131,18 +130,18 @@ p {
 ============================================================ */
 
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--bg);
+  background: var(--bg);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #2d2d31;
-    border-radius: 999px;
+  background: #2d2d31;
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #3b3b40;
+  background: #3b3b40;
 }
