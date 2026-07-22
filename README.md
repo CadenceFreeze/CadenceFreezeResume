@@ -15,32 +15,32 @@ Please stop by again later!
 <Issue #N>
 
 ## Code Structure
-cadencefreeze.github.io/
-│
-├── src/
-│   ├── lib/
-│   │   ├── components/
-|   |   |   ├── ui/
-|   |   |   │     Button.svelte
-|   |   |   │     Card.svelte
-|   |   |   │     Section.svelte
-|   |   |   │
-|   |   |   ├── layout/
-|   |   |   │     Navbar.svelte
-|   |   |   │     Footer.svelte
-|   |   |   │
-|   |   |   ├──  sections/
-|   |   |   |     Hero.svelte
-|   |   |   |     Timeline.svelte
-│   │   │
-│   │   ├── animations/
-│   │   ├── styles/
-│   │   └── assets/
-│   │
-│   ├── routes/
-│   │      +layout.svelte
-│   │      +page.svelte
-│   │
-│   └── app.css
-│
-└── static/
+cadencefreeze.github.io/   
+│   
+├── src/   
+│   ├── lib/   
+│   │   ├── components/   
+|   |   |   ├── ui/   
+|   |   |   │     Button.svelte   
+|   |   |   │     Card.svelte   
+|   |   |   │     Section.svelte   
+|   |   |   │   
+|   |   |   ├── layout/   
+|   |   |   │     Navbar.svelte   
+|   |   |   │     Footer.svelte   
+|   |   |   │   
+|   |   |   ├──  sections/   
+|   |   |   |     Hero.svelte   
+|   |   |   |     Timeline.svelte   
+│   │   │   
+│   │   ├── animations/   
+│   │   ├── styles/   
+│   │   └── assets/   
+│   │   
+│   ├── routes/   
+│   │      +layout.svelte   
+│   │      +page.svelte   
+│   │   
+│   └── app.css   
+│   
+└── static/   
