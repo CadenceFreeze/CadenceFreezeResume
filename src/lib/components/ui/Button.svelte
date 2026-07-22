@@ -28,7 +28,7 @@
 		class:button--outline={appearance === "outline"}
 		aria-disabled={disabled}
 		href={disabled ? undefined : href}
-	>
+		>
 		{@render children()}
 	</a>
 {:else}
@@ -38,7 +38,7 @@
 		class:button--outline={appearance === "outline"}
 		{type}
 		{disabled}
-	>
+		>
 		{@render children()}
 	</button>
 {/if}
@@ -70,51 +70,51 @@
 		color 180ms ease,
 		transform 180ms ease,
 		box-shadow 180ms ease;
-}
+	}
 
 /* ---------- Variants ---------- */
 
-.button--solid {
-	background: var(--accent);
-	color: white;
-}
+	.button--solid {
+		background: var(--accent);
+		color: white;
+	}
 
-.button--solid:hover:not(:disabled):not([aria-disabled="true"]) {
-	background: var(--accent-hover);
-	transform: translateY(-2px);
-}
+	.button--solid:hover:not(:disabled):not([aria-disabled="true"]) {
+		background: var(--accent-hover);
+		transform: translateY(-2px);
+	}
 
-.button--outline {
-	background: transparent;
-	border-color: rgba(255, 255, 255, 0.25);
-	color: var(--text);
-}
+	.button--outline {
+		background: transparent;
+		border-color: rgba(255, 255, 255, 0.25);
+		color: var(--text);
+	}
 
-.button--outline:hover:not(:disabled):not([aria-disabled="true"]) {
-	background: rgba(255, 255, 255, 0.05);
-	border-color: rgba(255, 255, 255, 0.45);
-	transform: translateY(-2px);
-}
+	.button--outline:hover:not(:disabled):not([aria-disabled="true"]) {
+		background: rgba(255, 255, 255, 0.05);
+		border-color: rgba(255, 255, 255, 0.45);
+		transform: translateY(-2px);
+	}
 
 /* ---------- Active ---------- */
 
-.button:active:not(:disabled):not([aria-disabled="true"]) {
-	transform: translateY(0);
-}
+	.button:active:not(:disabled):not([aria-disabled="true"]) {
+		transform: translateY(0);
+	}
 
 /* ---------- Focus ---------- */
 
-.button:focus-visible {
-	outline: none;
-	box-shadow: 0 0 0 4px rgba(79, 140, 255, 0.25);
-}
+	.button:focus-visible {
+		outline: none;
+		box-shadow: 0 0 0 4px rgba(79, 140, 255, 0.25);
+	}
 
 /* ---------- Disabled ---------- */
 
-.button:disabled,
-.button[aria-disabled="true"] {
-	opacity: 0.45;
-	cursor: not-allowed;
-	pointer-events: none;
-}
+	.button:disabled,
+	.button[aria-disabled="true"] {
+		opacity: 0.45;
+		cursor: not-allowed;
+		pointer-events: none;
+	}
 </style>

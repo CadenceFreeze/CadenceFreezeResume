@@ -1,12 +1,17 @@
 <script lang="ts">
-	import Button from "$lib/components/ui/Button.svelte";
-    import Card from "$lib/components/ui/Card.svelte";
-  import Container from "$lib/components/ui/Container.svelte";
+  import { 
+    Button,
+    Card,
+    Container,
+    Section,
+} from "$lib/components/ui";
+
+
 </script>
 
 <Container>
     <br />
-    
+
 	<h1>Design System</h1>
 
 	<div class="row">
@@ -55,6 +60,40 @@
 		</p>
 	</Card>
 </Container>
+
+<Section id="test">
+
+	<Container>
+
+		<Card>
+			<h1>
+				Section Test
+			</h1>
+
+			<p>
+				This section controls spacing.
+			</p>
+		</Card>
+
+	</Container>
+
+</Section>
+
+
+<Section compact>
+
+	<Container>
+
+		<Card>
+			<h2>
+				Compact Section
+			</h2>
+
+		</Card>
+
+	</Container>
+
+</Section>
 
 <style>
 	h1 {

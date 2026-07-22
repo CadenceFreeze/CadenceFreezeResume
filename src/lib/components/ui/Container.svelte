@@ -12,11 +12,10 @@
 
 <style>
     .container {
-	width: min(
-		var(--max-width),
-		calc(100% - 3rem)
-	);
-
-	margin-inline: auto;
-}
+		width: min(
+			var(--max-width),
+			calc(100% - 3rem)
+			);
+		margin-inline: auto;
+	}
 </style>
