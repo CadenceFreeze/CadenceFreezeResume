@@ -1,4 +1,10 @@
 <script lang="ts">
+  import profile from "$lib/assets/profile.png";
+  import { onMount } from "svelte";
+
+  let menu: HTMLDivElement;
+  let menuButton: HTMLButtonElement;
+
   const links = [
     {
       label: "Experience",
@@ -19,56 +25,133 @@
   ];
 
   let menuOpen = $state(false);
+
+  onMount(() => {
+    function handleClick(event: MouseEvent) {
+      const target = event.target as Node;
+
+      if (menuOpen && !menu.contains(target) && !menuButton.contains(target)) {
+        menuOpen = false;
+      }
+    }
+
+    document.addEventListener("click", handleClick);
+
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  });
 </script>
 
 <nav class="navbar">
   <div class="nav-container">
     <a class="brand" href="/"> Cadence Freeze </a>
 
-    <button
-      class="menu-button"
-      onclick={() => (menuOpen = !menuOpen)}
-      aria-label="Toggle navigation"
-    >
-      ☰
-    </button>
-
-    <div class="links" class:open={menuOpen}>
+    <div bind:this={menu} class="links" class:open={menuOpen}>
       {#each links as link}
         <a href={link.href} onclick={() => (menuOpen = false)}>
           {link.label}
         </a>
       {/each}
     </div>
+
+    <a href="/about" class="profile-link" aria-label="About Cadence">
+      <img src={profile} alt="Cadence Freeze" class="profile-image" />
+    </a>
+
+    <button
+      class="menu-button"
+      bind:this={menuButton}
+      class:open={menuOpen}
+      onclick={() => (menuOpen = !menuOpen)}
+      aria-label="Toggle navigation"
+    >
+      <svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <line class="top" x1="4" y1="7" x2="20" y2="7" />
+        <line class="middle" x1="4" y1="12" x2="20" y2="12" />
+        <line class="bottom" x1="4" y1="17" x2="20" y2="17" />
+      </svg>
+    </button>
   </div>
 </nav>
 
 <style>
+  .menu-button {
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .menu-button:hover {
+    background: var(--surface-hover);
+  }
+
+  .menu-button.open {
+    color: var(--accent);
+  }
+
+  .menu-icon {
+    width: 22px;
+    height: 22px;
+
+    overflow: visible;
+  }
+
+  .menu-icon line {
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+
+    transform-box: fill-box;
+    transform-origin: center;
+
+    transition:
+      transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.2s ease;
+  }
+
+  .menu-button.open .top {
+    transform: translateY(5px) rotate(45deg);
+  }
+
+  .menu-button.open .middle {
+    opacity: 0;
+  }
+
+  .menu-button.open .bottom {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+
   .navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-
     z-index: 100;
-
     background: rgba(9, 9, 11, 0.65);
-
     backdrop-filter: blur(16px);
-
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  .nav-container {
-    width: min(var(--max-width), calc(100% - 3rem));
-
-    margin-inline: auto;
-
-    height: 72px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    height: 64px;
+    align-content: center;
   }
 
   .brand {
@@ -76,57 +159,83 @@
     letter-spacing: -0.03em;
   }
 
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0 1.5rem;
+    position: relative;
+  }
+
   .links {
     display: flex;
-    gap: 2rem;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+    width: max-content;
+    min-width: 180px;
+    right: 1.5rem;
+  }
+
+  .profile-link {
+    display: flex;
+    align-items: center;
+    margin-left: 0.75rem;
+  }
+
+  .profile-image {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border);
+    transition:
+      transform 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .profile-link:hover .profile-image {
+    transform: scale(1.05);
+    border-color: var(--accent);
   }
 
   .links a {
+    padding: 0.75rem 1rem;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
     color: var(--text-muted);
-
-    font-size: 0.95rem;
-
-    transition: color 150ms ease;
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
   }
 
   .links a:hover {
-    color: var(--text);
+    background: var(--surface-hover);
+    border-left: 3px solid var(--accent);
+    padding-left: calc(1rem - 3px);
   }
 
-  .menu-button {
-    display: none;
-
-    background: transparent;
-    border: none;
-
-    color: var(--text);
-
-    font-size: 1.5rem;
-
-    cursor: pointer;
-  }
-
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
     .menu-button {
       display: block;
     }
 
     .links {
-      position: absolute;
-
-      top: 72px;
-      left: 0;
-      right: 0;
-
       display: none;
-
+      position: absolute;
+      top: calc(100% + 0.75rem);
+      right: 1.5rem;
+      width: max-content;
+      min-width: 160px;
       flex-direction: column;
-
-      padding: 1.5rem;
-
+      padding: 0.5rem;
       background: var(--bg-secondary);
-
-      border-bottom: 1px solid var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      z-index: 100;
     }
 
     .links.open {

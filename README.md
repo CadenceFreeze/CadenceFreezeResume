@@ -35,7 +35,7 @@ cadencefreeze.github.io/
 │   │   │
 │   │   ├── animations/
 │   │   ├── styles/
-│   │   └── data/
+│   │   └── assets/
 │   │
 │   ├── routes/
 │   │      +layout.svelte
