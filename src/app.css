@@ -101,11 +101,6 @@ p {
    Utilities
 ============================================================ */
 
-.container {
-    width: min(var(--max-width), calc(100% - 3rem));
-    margin-inline: auto;
-}
-
 .section {
     padding: 8rem 0;
 }

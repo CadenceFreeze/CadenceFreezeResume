@@ -1,9 +1,12 @@
 <script lang="ts">
 	import Button from "$lib/components/ui/Button.svelte";
     import Card from "$lib/components/ui/Card.svelte";
+  import Container from "$lib/components/ui/Container.svelte";
 </script>
 
-<div class="container section">
+<Container>
+    <br />
+    
 	<h1>Design System</h1>
 
 	<div class="row">
@@ -51,7 +54,7 @@
 			Hover me.
 		</p>
 	</Card>
-</div>
+</Container>
 
 <style>
 	h1 {
