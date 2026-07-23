@@ -102,7 +102,7 @@
   }
 
   .menu-button:hover {
-    background: var(--surface-hover);
+    background: var(--accent-soft);
   }
 
   .menu-button.open {
@@ -147,9 +147,9 @@
     left: 0;
     right: 0;
     z-index: 100;
-    background: rgba(9, 9, 11, 0.65);
+    background: var(--navbar-background);
     backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--navbar-border);
     height: 64px;
     align-content: center;
   }
@@ -212,7 +212,7 @@
   }
 
   .links a:hover {
-    background: var(--surface-hover);
+    background: var(--accent-soft);
     border-left: 3px solid var(--accent);
     padding-left: calc(1rem - 3px);
   }

@@ -34,9 +34,8 @@
 
   .card--interactive:hover {
     background: var(--surface-hover);
-
-    border-color: rgba(255, 255, 255, 0.18);
-
+    border-color: var(--card-border);
     transform: translateY(-4px);
+    box-shadow: 0 0 30px var(--accent-glow);
   }
 </style>

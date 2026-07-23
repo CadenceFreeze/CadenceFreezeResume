@@ -79,19 +79,19 @@
   }
 
   .button--solid:hover:not(:disabled):not([aria-disabled="true"]) {
-    background: var(--accent-hover);
+    background: var(--accent-soft);
     transform: translateY(-2px);
   }
 
   .button--outline {
     background: transparent;
-    border-color: rgba(255, 255, 255, 0.25);
+    border-color: var(--button-outline);
     color: var(--text);
   }
 
   .button--outline:hover:not(:disabled):not([aria-disabled="true"]) {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.45);
+    background: var(--button-outline-background);
+    border-color: var(--button-outline-hover);
     transform: translateY(-2px);
   }
 
@@ -105,7 +105,7 @@
 
   .button:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 4px rgba(79, 140, 255, 0.25);
+    box-shadow: 0 0 0 4px var(--accent-soft);
   }
 
   /* ---------- Disabled ---------- */
