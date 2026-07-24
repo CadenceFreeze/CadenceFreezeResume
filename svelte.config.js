@@ -1,16 +1,18 @@
 import adapter from "@sveltejs/adapter-static";
-import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 
-const config = {
-	preprocess: vitePreprocess(),
+export default {
+  kit: {
+    adapter: adapter({
+      pages: "build",
+      assets: "build",
+      fallback: "404.html",
+    }),
+  },
 
-	kit: {
-		adapter: adapter(),
-
-		paths: {
-			base: "/CadenceFreezeResume",
-		},
-	},
+  compilerOptions: {
+    runes: ({ filename }) =>
+      filename.split(/[/\\]/).includes("node_modules")
+        ? undefined
+        : true,
+  },
 };
-
-export default config;
