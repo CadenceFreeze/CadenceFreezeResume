@@ -1,12 +1,13 @@
 <script lang="ts">
   import "../app.css";
   import Navbar from "$lib/components/layout/Navbar.svelte";
+  import favicon from "$lib/assets/favicon.svg";
 
   let { children } = $props();
 </script>
 
 <svelte:head>
-  <link rel="icon" href="$lib/assets/favicon.svg" />
+  <link rel="icon" href={favicon} />
 </svelte:head>
 
 <Navbar />

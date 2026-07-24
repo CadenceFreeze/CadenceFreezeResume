@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import profileImage from "$lib/assets/profile.png";
 
   let menu: HTMLDivElement;
   let menuButton: HTMLButtonElement;
@@ -54,7 +55,7 @@
       {/each}
     </div>
     <a href="/about" class="profile-link" aria-label="About Cadence">
-      <img src="$lib/assets/profile.png" alt="Cadence Freeze" class="profile-image" />
+      <img src={profileImage} alt="Cadence Freeze" class="profile-image" />
     </a>
 
     <button
