@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-  <link rel="icon" href="/assets/favicon.svg" />
+  <link rel="icon" href="%sveltekit.assets%/assets/favicon.svg" />
 </svelte:head>
 
 <Navbar />

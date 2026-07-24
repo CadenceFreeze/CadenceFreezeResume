@@ -3,7 +3,7 @@ import QRCode from "qrcode";
 const url = "https://cadencefreeze.github.io/";
 
 await QRCode.toFile(
-  "static/assets/cadence-qr.png",
+  "%sveltekit.assets%/assets/profile.png",
   url,
   {
     type: "png",
