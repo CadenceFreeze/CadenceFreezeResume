@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import profileImage from "$lib/assets/profile.png";
+  import logo from "$lib/assets/logo.svg";
 
   let menu: HTMLDivElement;
   let menuButton: HTMLButtonElement;
@@ -45,7 +46,9 @@
 
 <nav class="navbar">
   <div class="nav-container">
-    <a class="brand" href="/"> Cadence Freeze </a>
+    <a class="brand" href="/">
+      <img src={logo} alt="Cadence Freeze" />
+    </a>
 
     <div bind:this={menu} class="links" class:open={menuOpen}>
       {#each links as link}

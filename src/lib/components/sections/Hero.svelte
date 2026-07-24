@@ -119,10 +119,10 @@
   }
 
   .proof {
-	display: flex;
-	flex-direction: column;
-	gap: 0.75rem;
-}
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 
   .proof div {
     display: grid;
@@ -142,10 +142,10 @@
   }
 
   .visual {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-}
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 
   .system-card {
     width: 100%;
