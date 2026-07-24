@@ -55,7 +55,7 @@
     </div>
 
     <a href="/about" class="profile-link" aria-label="About Cadence">
-      <img src="/assets/profile.png" alt="Cadence Freeze" class="profile-image" />
+      <img src="/CadenceFreezeResume/src/static/assets/profile.png" alt="Cadence Freeze" class="profile-image" />
     </a>
 
     <button

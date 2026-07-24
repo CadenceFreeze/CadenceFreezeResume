@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-  <link rel="icon" href="$lib/assets/favicon.svg" />
+  <link rel="icon" href="/CadenceFreezeResume/src/static/assets/favicon.svg" />
 </svelte:head>
 
 <Navbar />
