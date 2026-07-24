@@ -9,11 +9,11 @@
   const links = [
     {
       label: "Experience",
-      href: "#experience",
+      href: "/experience",
     },
     {
       label: "Projects",
-      href: "#projects",
+      href: "/projects",
     },
     {
       label: "Resume",
@@ -21,7 +21,7 @@
     },
     {
       label: "Contact",
-      href: "#contact",
+      href: "/contact",
     },
   ];
 
