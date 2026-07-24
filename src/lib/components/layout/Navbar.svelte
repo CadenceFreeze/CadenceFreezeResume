@@ -157,8 +157,15 @@
   }
 
   .brand {
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
+
+  .brand img {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
   }
 
   .nav-container {
