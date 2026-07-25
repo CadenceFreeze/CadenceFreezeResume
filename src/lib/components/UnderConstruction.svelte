@@ -17,7 +17,7 @@
 
   <p>{description}</p>
 
-  <a href="/" class="button">
+  <a href="/CadenceFreezeResume" class="button">
     Return Home
   </a>
 </section>

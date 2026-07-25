@@ -47,7 +47,7 @@
 
 <nav class="navbar">
   <div class="nav-container">
-    <a class="brand" href="/">
+    <a class="brand" href="about">
       <img src={logo} alt="Cadence Freeze" />
     </a>
 
