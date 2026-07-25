@@ -7,16 +7,8 @@ export default {
       assets: "build",
       fallback: "404.html",
     }),
-
     paths: {
       base: "/CadenceFreezeResume",
     },
-  },
-
-  compilerOptions: {
-    runes: ({ filename }) =>
-      filename.split(/[/\\]/).includes("node_modules")
-        ? undefined
-        : true,
   },
 };
