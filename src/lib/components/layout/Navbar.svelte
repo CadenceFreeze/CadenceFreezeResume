@@ -3,25 +3,26 @@
   import profileImage from "$lib/assets/profile.png";
   import logo from "$lib/assets/logo.svg";
 
+
   let menu: HTMLDivElement;
   let menuButton: HTMLButtonElement;
 
   const links = [
     {
       label: "Experience",
-      href: "CadenceFreezeResume/experience",
+      href: "/experience",
     },
     {
       label: "Projects",
-      href: "CadenceFreezeResume/projects",
+      href: "/projects",
     },
     {
       label: "Resume",
-      href: "CadenceFreezeResume/resume",
+      href: "/resume",
     },
     {
       label: "Contact",
-      href: "CadenceFreezeResume/contact",
+      href: "/contact",
     },
   ];
 

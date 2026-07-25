@@ -1,6 +1,6 @@
 import adapter from "@sveltejs/adapter-static";
 
-export default {
+const config = {
   kit: {
     adapter: adapter({
       pages: "build",
@@ -13,6 +13,10 @@ export default {
         ? "/CadenceFreezeResume"
         : "",
     },
+
+    prerender: {
+      entries: ["*"],
+    },
   },
 
   compilerOptions: {
@@ -22,3 +26,5 @@ export default {
         : true,
   },
 };
+
+export default config;
