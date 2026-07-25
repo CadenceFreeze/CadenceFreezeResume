@@ -10,19 +10,19 @@
   const links = [
     {
       label: "Experience",
-      href: "/experience",
+      href: "experience",
     },
     {
       label: "Projects",
-      href: "/projects",
+      href: "projects",
     },
     {
       label: "Resume",
-      href: "/resume",
+      href: "resume",
     },
     {
       label: "Contact",
-      href: "/contact",
+      href: "contact",
     },
   ];
 
@@ -58,7 +58,7 @@
         </a>
       {/each}
     </div>
-    <a href="/about" class="profile-link" aria-label="About Cadence">
+    <a href="about" class="profile-link" aria-label="About Cadence">
       <img src={profileImage} alt="Cadence Freeze" class="profile-image" />
     </a>
 

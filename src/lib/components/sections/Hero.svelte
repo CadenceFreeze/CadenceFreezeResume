@@ -19,9 +19,9 @@
         </p>
 
         <div class="actions">
-          <Button href="/projects">Explore Projects →</Button>
+          <Button href="projects">Explore Projects →</Button>
 
-          <Button href="/resume" appearance="outline">View Resume</Button>
+          <Button href="resume" appearance="outline">View Resume</Button>
         </div>
       </div>
       <div class="visual">
