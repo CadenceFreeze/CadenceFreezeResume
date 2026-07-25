@@ -1,6 +1,6 @@
 import adapter from "@sveltejs/adapter-static";
 
-const config = {
+export default {
   kit: {
     adapter: adapter({
       pages: "build",
@@ -9,13 +9,7 @@ const config = {
     }),
 
     paths: {
-      base: process.env.NODE_ENV === "production"
-        ? "/CadenceFreezeResume"
-        : "",
-    },
-
-    prerender: {
-      entries: ["*"],
+      base: "/CadenceFreezeResume",
     },
   },
 
@@ -26,5 +20,3 @@ const config = {
         : true,
   },
 };
-
-export default config;
