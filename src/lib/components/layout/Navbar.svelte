@@ -9,19 +9,19 @@
   const links = [
     {
       label: "Experience",
-      href: "/experience",
+      href: "CadenceFreezeResume/experience",
     },
     {
       label: "Projects",
-      href: "/projects",
+      href: "CadenceFreezeResume/projects",
     },
     {
       label: "Resume",
-      href: "/resume",
+      href: "CadenceFreezeResume/resume",
     },
     {
       label: "Contact",
-      href: "/contact",
+      href: "CadenceFreezeResume/contact",
     },
   ];
 
