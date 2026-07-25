@@ -1,6 +1,6 @@
 import QRCode from "qrcode";
 
-const url = "https://cadencefreeze.github.io/";
+const url = "https://cadencefreeze.github.io/CadenceFreezeResume/";
 
 await QRCode.toFile("src/lib/assets/cadence-qr.png", url, {
   type: "png",
