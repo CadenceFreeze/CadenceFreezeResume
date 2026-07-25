@@ -4,7 +4,7 @@
 
 <UnderConstruction
   title="Experience"
-  description="I'm currently building a timeline of my work experience and projects. In the meantime, feel free to check out my resume (cadencefreeze.com/resume) for a summary of my experience.
+  description="I'm currently building a timeline of my work experience and projects. In the meantime, feel free to check out my resume for a summary of my experience.
   "
 />
 
