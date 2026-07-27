@@ -3,14 +3,14 @@ import { existsSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 
 const root = process.cwd();
-const outputDir = join(root, "static", "resume");
+const outputDir = join(root, "static", "assets", "resume");
 
 if (!existsSync(outputDir)) {
   mkdirSync(outputDir, { recursive: true });
 }
 
 try {
-  const resumeFile = join(root, "static", "resume", "cadence-resume.tex");
+  const resumeFile = join(root, "static", "assets", "resume", "cadence-resume.tex");
 
   execSync(
     `latexmk -pdf -interaction=nonstopmode -output-directory="${outputDir}" "${resumeFile}"`,
