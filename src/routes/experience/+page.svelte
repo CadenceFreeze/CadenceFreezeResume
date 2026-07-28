@@ -1,10 +1,41 @@
-<script>
-  import UnderConstruction from "$lib/components/UnderConstruction.svelte";
+<svelte:head>
+    <title>Experience | Cadence Freeze</title>
+</svelte:head>
+
+<script lang="ts">
+import ExperienceTimeline from "$lib/components/experience/ExperienceTimeline.svelte";
 </script>
 
-<UnderConstruction
-  title="Experience"
-  description="I'm currently building a timeline of my work experience and projects. In the meantime, feel free to check out my resume for a summary of my experience.
-  "
-/>
+<section class="page">
 
+    <h1>Experience</h1>
+
+    <p class="subtitle">
+        Professional software engineering experience, leadership, and technical growth.
+    </p>
+
+    <ExperienceTimeline/>
+
+</section>
+
+<style>
+
+.page{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:7rem 2rem 4rem;
+
+}
+
+.subtitle{
+
+margin-bottom:4rem;
+
+color:var(--text-muted);
+
+}
+
+</style>
