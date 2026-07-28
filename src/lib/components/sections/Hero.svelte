@@ -84,7 +84,6 @@
     gap: 5rem;
     align-items: center;
     min-height: calc(100vh - 72px);
-    padding: 4rem 0;
   }
 
   .content {

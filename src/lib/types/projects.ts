@@ -1,6 +1,8 @@
 export interface Project {
   title: string;
   description: string;
+  slug?: string;
+  longDescription?: string;
 
   technologies: string[];
 
@@ -11,11 +13,7 @@ export interface Project {
 
   featured?: boolean;
 
-  category:
-    | "Software"
-    | "AI/ML"
-    | "Web"
-    | "Automation";
+  category: "Software" | "AI/ML" | "Web" | "Automation" | "Professional" | "Education" | "Personal";
 
   highlights: string[];
 }

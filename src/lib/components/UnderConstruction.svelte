@@ -9,17 +9,13 @@
 </script>
 
 <section class="construction">
-  <div class="icon">
-    🚧
-  </div>
+  <div class="icon">🚧</div>
 
   <h1>{title}</h1>
 
   <p>{description}</p>
 
-  <a href="/CadenceFreezeResume" class="button">
-    Return Home
-  </a>
+  <a href="/CadenceFreezeResume" class="button"> Return Home </a>
 </section>
 
 <style>
@@ -31,6 +27,7 @@
     align-items: center;
     text-align: center;
     gap: 1rem;
+    padding-top: 6rem;
   }
 
   .icon {

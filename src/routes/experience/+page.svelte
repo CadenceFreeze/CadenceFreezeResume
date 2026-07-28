@@ -1,41 +1,43 @@
-<svelte:head>
-    <title>Experience | Cadence Freeze</title>
-</svelte:head>
-
 <script lang="ts">
-import ExperienceTimeline from "$lib/components/experience/ExperienceTimeline.svelte";
+  import ExperienceTimeline from "$lib/components/experience/ExperienceTimeline.svelte";
 </script>
 
+<svelte:head>
+  <title>Experience | Cadence Freeze</title>
+</svelte:head>
+
 <section class="page">
+  <h1>Experience</h1>
 
-    <h1>Experience</h1>
+  <p class="subtitle">
+    Professional software engineering experience, leadership, and technical
+    growth.
+  </p>
 
-    <p class="subtitle">
-        Professional software engineering experience, leadership, and technical growth.
-    </p>
-
-    <ExperienceTimeline/>
-
+  <ExperienceTimeline />
 </section>
 
 <style>
+  .page {
+    max-width: 1100px;
 
-.page{
+    margin: auto;
 
-max-width:1100px;
+    padding: 7rem 2rem 4rem;
+  }
 
-margin:auto;
+  .subtitle {
+    margin-bottom: 4rem;
 
-padding:7rem 2rem 4rem;
+    color: var(--text-muted);
+  }
+  h1 {
+    margin-bottom: 1rem;
+  }
 
-}
+  p {
+    margin-bottom: 4rem;
 
-.subtitle{
-
-margin-bottom:4rem;
-
-color:var(--text-muted);
-
-}
-
+    color: var(--text-muted);
+  }
 </style>

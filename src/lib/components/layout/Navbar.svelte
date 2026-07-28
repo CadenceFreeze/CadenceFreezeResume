@@ -3,26 +3,25 @@
   import profileImage from "$lib/assets/profile.png";
   import logo from "$lib/assets/logo.svg";
 
-
   let menu: HTMLDivElement;
   let menuButton: HTMLButtonElement;
 
   const links = [
     {
       label: "Experience",
-      href: "experience",
+      href: "/CadenceFreezeResume/experience",
     },
     {
       label: "Projects",
-      href: "projects",
+      href: "/CadenceFreezeResume/projects",
     },
     {
       label: "Resume",
-      href: "resume",
+      href: "/CadenceFreezeResume/resume",
     },
     {
       label: "Contact",
-      href: "contact",
+      href: "/CadenceFreezeResume/contact",
     },
   ];
 
@@ -47,7 +46,7 @@
 
 <nav class="navbar">
   <div class="nav-container">
-    <a class="brand" href="about">
+    <a class="brand" href="/CadenceFreezeResume/">
       <img src={logo} alt="Cadence Freeze" />
     </a>
 
@@ -58,7 +57,7 @@
         </a>
       {/each}
     </div>
-    <a href="about" class="profile-link" aria-label="About Cadence">
+    <a href="/CadenceFreezeResume/about" class="profile-link" aria-label="About Cadence">
       <img src={profileImage} alt="Cadence Freeze" class="profile-image" />
     </a>
 
