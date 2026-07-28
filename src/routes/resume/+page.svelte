@@ -1,7 +1,7 @@
 <script>
   import Button from "$lib/components/ui/Button.svelte";
-
 </script>
+
 <svelte:head>
   <title>Resume | Cadence Freeze</title>
 </svelte:head>
@@ -12,13 +12,19 @@
 
     <p>Download my latest resume or view it directly below.</p>
 
-    <Button appearance="outline" href="/CadenceFreezeResume/assets/resume/cadence-resume.pdf">
+    <Button
+      appearance="outline"
+      href="/CadenceFreezeResume/assets/resume/cadence-resume.pdf"
+    >
       Download PDF
     </Button>
   </header>
 
   <div class="resume-container">
-    <iframe src="/CadenceFreezeResume/assets/resume/cadence-resume.pdf" title="Resume"></iframe>
+    <iframe
+      src="/CadenceFreezeResume/assets/resume/cadence-resume.pdf"
+      title="Resume"
+    ></iframe>
   </div>
 </section>
 

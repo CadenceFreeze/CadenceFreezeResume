@@ -1,33 +1,25 @@
 <script lang="ts">
-import { experiences } from "$lib/data/experience";
+  import { experiences } from "$lib/data/experience";
 
-import TimelineItem from "./TimelineItem.svelte";
+  import TimelineItem from "./TimelineItem.svelte";
 </script>
 
 <div class="timeline">
-
-    {#each experiences as experience}
-
-        <TimelineItem {experience}/>
-
-    {/each}
-
+  {#each experiences as experience}
+    <TimelineItem {experience} />
+  {/each}
 </div>
 
 <style>
+  .timeline {
+    display: flex;
 
-.timeline{
+    flex-direction: column;
 
-display:flex;
+    gap: 3rem;
 
-flex-direction:column;
+    max-width: 900px;
 
-gap:3rem;
-
-max-width:900px;
-
-margin:auto;
-
-}
-
+    margin: auto;
+  }
 </style>

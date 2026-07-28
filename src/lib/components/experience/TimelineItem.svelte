@@ -1,156 +1,121 @@
 <script lang="ts">
-import type { Experience } from "$lib/types/experience";
-import TimelineDot from "./TimelineDot.svelte";
-import CompanyBadge from "./CompanyBadge.svelte";
+  import type { Experience } from "$lib/types/experience";
+  import TimelineDot from "./TimelineDot.svelte";
+  import CompanyBadge from "./CompanyBadge.svelte";
 
-let { experience } = $props<{
+  let { experience } = $props<{
     experience: Experience;
-}>();
-
+  }>();
 </script>
 
 <div class="item">
+  <div class="left">
+    <TimelineDot />
 
-    <div class="left">
+    <div class="line"></div>
+  </div>
 
-        <TimelineDot/>
+  <div class="content">
+    <div class="header">
+      <div>
+        <h3>{experience.position}</h3>
 
-        <div class="line"></div>
+        <h4>{experience.company}</h4>
+      </div>
 
+      <CompanyBadge {experience} />
     </div>
 
-    <div class="content">
+    <p class="date">
+      {experience.start} — {experience.end}
+    </p>
 
-        <div class="header">
+    <p class="description">
+      {experience.description}
+    </p>
 
-            <div>
+    <ul>
+      {#each experience.bullets as bullet}
+        <li>{bullet}</li>
+      {/each}
+    </ul>
 
-                <h3>{experience.position}</h3>
-
-                <h4>{experience.company}</h4>
-
-            </div>
-
-            <CompanyBadge {experience}/>
-
-        </div>
-
-        <p class="date">
-            {experience.start} — {experience.end}
-        </p>
-
-        <p class="description">
-            {experience.description}
-        </p>
-
-        <ul>
-
-            {#each experience.bullets as bullet}
-                <li>{bullet}</li>
-            {/each}
-
-        </ul>
-
-        <div class="tech">
-
-            {#each experience.technologies as tech}
-                <span>{tech}</span>
-            {/each}
-
-        </div>
-
+    <div class="tech">
+      {#each experience.technologies as tech}
+        <span>{tech}</span>
+      {/each}
     </div>
-
+  </div>
 </div>
 
 <style>
+  .item {
+    display: grid;
 
-.item{
+    grid-template-columns: 40px 1fr;
 
-display:grid;
+    gap: 1rem;
+  }
 
-grid-template-columns:40px 1fr;
+  .left {
+    display: flex;
 
-gap:1rem;
+    flex-direction: column;
 
-}
+    align-items: center;
+  }
 
-.left{
+  .line {
+    width: 2px;
 
-display:flex;
+    flex: 1;
 
-flex-direction:column;
+    background: var(--border);
 
-align-items:center;
+    margin-top: 0.4rem;
+  }
 
-}
+  .header {
+    display: flex;
 
-.line{
+    justify-content: space-between;
 
-width:2px;
+    align-items: flex-start;
 
-flex:1;
+    gap: 1rem;
+  }
 
-background:var(--border);
+  .date {
+    color: var(--text-muted);
 
-margin-top:.4rem;
+    margin: 0.35rem 0;
+  }
 
-}
+  .description {
+    margin-bottom: 0.8rem;
+  }
 
-.header{
+  ul {
+    padding-left: 1.2rem;
+  }
 
-display:flex;
+  .tech {
+    display: flex;
 
-justify-content:space-between;
+    flex-wrap: wrap;
 
-align-items:flex-start;
+    gap: 0.5rem;
 
-gap:1rem;
+    margin-top: 1rem;
+  }
 
-}
+  .tech span {
+    padding: 0.35rem 0.7rem;
 
-.date{
+    background: var(--bg-secondary);
 
-color:var(--text-muted);
+    border-radius: 999px;
 
-margin:.35rem 0;
-
-}
-
-.description{
-
-margin-bottom:.8rem;
-
-}
-
-ul{
-
-padding-left:1.2rem;
-
-}
-
-.tech{
-
-display:flex;
-
-flex-wrap:wrap;
-
-gap:.5rem;
-
-margin-top:1rem;
-
-}
-
-.tech span{
-
-padding:.35rem .7rem;
-
-background:var(--bg-secondary);
-
-border-radius:999px;
-
-font-size:.8rem;
-
-}
-
+    font-size: 0.8rem;
+  }
 </style>
