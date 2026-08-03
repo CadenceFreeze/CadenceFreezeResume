@@ -2,7 +2,7 @@
   import { Button, Container, Section } from "$lib/components/ui";
 </script>
 
-<Section>
+<Section compact={true}>
   <Container>
     <div class="hero">
       <div class="content">
@@ -76,15 +76,15 @@
 </Section>
 
 <style>
-  .hero {
-    display: grid;
-    grid-template-columns:
-      minmax(0, 1.1fr)
-      minmax(320px, 0.9fr);
-    gap: 5rem;
-    align-items: center;
-    min-height: calc(100vh - 72px);
-  }
+.hero {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(320px, 0.9fr);
+  gap: 5rem;
+  align-items: center;
+  padding: 5rem 0 3rem;
+}
 
   .content {
     max-width: 700px;
@@ -114,7 +114,6 @@
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-    margin-bottom: 4rem;
   }
 
   .proof {
